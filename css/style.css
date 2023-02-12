@@ -7,6 +7,16 @@
 .font {
     font-weight: bold;
 }
+.white-text{
+    color:white;
+}
+.gray-text{
+    color:gray;
+}
+.price-color{
+    color:#dfc691;
+    font-size: 30px;
+}
 .text-color{
     color:#a47d5e;
 }
@@ -34,13 +44,19 @@ h1{
 }
 
 .section{
-       position: relative; 
+    position: relative; 
     background-image: url("../images/hero5.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     
 }
+ a {
+    font-family: 'Alegreya', serif;
+
+}
+ 
+
 /* navbar */
 .navbar-brand{
     font-family: 'Clicker Script', cursive;
@@ -48,13 +64,13 @@ h1{
     font-weight: 500;
     color: white;
 }
-a {
-    font-family: 'Alegreya', serif;
+.navbar-nav a {
     color: white;
 }
-a:hover{
+.navbar-nav a:hover{
     color:#deceb6;
 }
+
 button{
     width:200px;
     height:50px;
@@ -132,7 +148,11 @@ button:hover{
 .sec img{
     width:100%;
 }
-
+.border {
+    border-color:#c2beba  !important;
+    
+}
+    
 .profile{
     width:33.33%;
 
@@ -212,18 +232,173 @@ button:hover{
 .caption h2{
     max-width: 500px;
 }
+
+
+/* breakfast section */
+
+.breakfast{
+    background-image: url('../images/breakfast.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+.layer1{
+    width:14px;
+    height:530px;
+    position: absolute;
+    right:-14px;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.layer2{
+    width:14px;
+    height:450px;
+    position: absolute;
+    right:-27px;
+    top:50%;
+    transform: translateY(-50%);
+   z-index: 1;
+}
+
+.cart{
+    z-index: 8;
+}
+.adv{
+    background-image: url('../images/rye.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-color: #56534c;
+    border-style: dashed;
+   
+    background-color: white;
+}
+.adv h2::before {
+    content: 'EST.';
+    position: absolute;
+    top:40px;
+    left:27%;
+   font-size: small;
+}
+.adv h2::after {
+    content: '1893';
+    position: absolute;
+    top:40px;
+    right:27%;
+   font-size: small;
+}
+
+
+
+/* sandwich section */
+.sandwich{
+    background-color: #f3f1e9;
+}
+.sandwich h2{
+    background-image: url('../images/mill-small.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+.burger{
+    border:10px solid white;
+    background-color: antiquewhite;
+      height: 70%;
+    
+}
+.layer3{
+    position: absolute;
+    left:0px;
+    bottom: 0px;
+     z-index: 9999999999999;
+}
+.layer4{
+  position: absolute;
+  right:0px;
+  top:-8%;
+  width:200px;
+  height:200px;
+  z-index: 1;
+ 
+}
+.border-top{
+    border-color:#56534c!important;
+}
+.border-bottom{
+    border-color: #dfc691 !important;
+}
+.boxes{
+   
+   width:100%; 
+   height:100%;
+   background-color: rgba(255, 255, 255, 0.89); 
+   
+  
+  transition-duration: 1s;
+}
+
+
+.boxes:hover{
+    background-image: url('../images/field.png');
+}
+
+
+
+
+/* footer */
+.footer{
+    background-color: #f3f1e9;
+}
+.logo{
+    font-family: 'Clicker Script', cursive;
+    font-size: 40px;
+    font-weight: 500;
+    max-width: 200px;
+    
+}
+.foot-link{
+    border-top: #c2beba 1px solid;
+    border-bottom: #c2beba 1px solid ;
+}
+
+.foot-link a{
+color:black;
+}
+
+.foot-link a:hover{
+    color:#deceb6;
+}
+.shape{
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+
+
 @media screen and (max-width:1240px) and (min-width:1201px){
     .box{
        
         right: 0px;
        
     }
-   
+    body{
+        overflow-x: hidden;
+    }
     
     
 }
 @media screen and (max-width:1200px) and (min-width:992px){
     
+    .recipes {
+        display: flex;
+        
+    }
+    .burger{
+        height: 100%;
+      }
+      .layer4{
+        
+        top:0%;
+      }
     .img{
         top:18%;
         width:220px;
@@ -252,12 +427,42 @@ button:hover{
 }
 
 @media screen and (max-width:991px) and (min-width:800px){
+    .recipes {
+        display: flex;
+        
+    }
+    .foot-link{
+        text-align: center;
+        border-top:  0px;
+        border-bottom: 0px ;
+        flex-direction: column;
+    }
+    .logo{ 
+        max-width: 700px;  
+        
+    }
+    .pt-4{
+        padding: 0 !important;
+    }
+    .shape{
+        display: none;
+    }
     .img{
         top:30%;
         left:32%;
         width:250px;
         height:250px;
     }
+    .burger{
+        height: 100%;
+       
+      }
+   
+      .layer4{
+
+        top:10%;
+        transform: translateY(-50%);
+      }
     .profile{
         left:35%;
     }
@@ -277,6 +482,31 @@ button:hover{
         top:31%;
         left:29%;
     }
+    .burger{
+        height: 100%;
+       
+      }
+      .pt-4{
+        padding: 0 !important;
+    }
+      .foot-link{
+        text-align: center;
+        border-top:  0px;
+        border-bottom: 0px ;
+        flex-direction: column;
+    }
+    .logo{  
+        max-width: 700px;   
+    }
+    .shape{
+        display: none;
+    }
+      .layer4{
+
+        top:10%;
+        transform: translateY(-50%);
+       
+      }
     .img p{
         margin-left: 0rem !important;
         padding-left: 3.5rem !important;
@@ -291,7 +521,33 @@ button:hover{
     .stars {
         font-size: 20px;
     }
-    
+    .pt-4{
+        padding: 0 !important;
+    }
+    .foot-link{
+        text-align: center;
+        border-top:  0px;
+        border-bottom: 0px ;
+        flex-direction: column;
+    }
+    .logo{  
+        max-width: 500px;   
+    }
+    .shape{
+        display: none;
+    }
+    .burger{
+        height: 100%;
+       
+      }
+   
+      .layer4{
+
+        top:0%;
+        transform: translateY(-50%);
+       width:190px;
+       height:190px;
+      }
    
     .box{
         top:48px;
@@ -315,8 +571,32 @@ button:hover{
 
 }
 @media screen and (max-width:639px) and (min-width:600px){
-    
-
+    .foot-link{
+        text-align: center;
+        border-top:  0px;
+        border-bottom: 0px ;
+        flex-direction: column;
+    }
+    .logo{  
+        max-width: 500px;   
+    }
+    .shape{
+        display: none;
+    }
+    .pt-4{
+        padding: 0 !important;
+    }
+    .burger{
+        height: 100%;
+       
+      }
+   
+      .layer4{
+        top:0%;
+        transform: translateY(-50%);
+       width:190px;
+       height:190px;
+      }
     .stars {
         font-size: 20px;
     }
@@ -347,7 +627,35 @@ button:hover{
  }
 }
 @media screen and (max-width:599px) and (min-width:530px){
-    
+    .burger{
+        height: 100%;
+       
+      }
+      .pt-4{
+        padding: 0 !important;
+    }
+      .foot-link{
+        text-align: center;
+        border-top:  0px;
+        border-bottom: 0px ;
+        flex-direction: column;
+    }
+    .logo{  
+        max-width: 500px;   
+    }
+    .shape{
+        display: none;
+    }
+      .layer4{
+
+        top:0%;
+        transform: translateY(-50%);
+       width:190px;
+       height:190px;
+      }
+    .col-sm-11{
+        width:90%;
+    }
     .stars {
         font-size: 20px;
     }
@@ -388,8 +696,37 @@ button:hover{
     
 }
 @media screen and (max-width:529px) and (min-width:500px){
+   
+    .pt-4{
+        padding: 0 !important;
+    }
+    .foot-link{
+        text-align: center;
+        border-top:  0px;
+        border-bottom: 0px ;
+        flex-direction: column;
+    }
+    .logo{  
+        max-width: 500px;   
+    }
     
-
+    .burger{
+         height: 100%;
+       }
+    
+       .layer4{
+         right:0px;
+         top:-5%;
+         transform: translateY(-50%);
+        width:190px;
+        height:190px;
+       }
+    .col-sm-11{
+        width:90%;
+    }
+  .header{
+    padding-block: 1rem;
+  }
     
     .stars {
         font-size: 20px;
@@ -435,7 +772,9 @@ button:hover{
         flex-wrap: wrap;
         
     }
-    
+    .shape{
+        display: none;
+    }
     h1{
         font-size: 70px;
 
