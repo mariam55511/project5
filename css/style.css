@@ -37,13 +37,14 @@ h4{
 }
 
 h1{
-    font-size: 85px;
+    font-size: 80px;
     font-weight: bolder;
     letter-spacing: 0.2rem;
     font-family: 'Playfair Display', serif;
 }
 
 .section{
+    min-height: 100vh;
     position: relative; 
     background-image: url("../images/hero5.jpg");
     background-position: center center;
@@ -97,9 +98,7 @@ button:hover{
 /* home section */
 
 .home{
- align-items: stretch;
- 
-   
+ min-height: 100vh;  
 }
 .layer{
     color:white;
@@ -113,14 +112,11 @@ button:hover{
 .header p{
     font-size: x-large;
     max-width: 450px;
+    text-align: center;
     margin-inline: auto;
+    
 }
-.header{
-    position: absolute;
-    top:50%;
-    transform:translateY(-50%);
-   
-}
+
 
 
 /* art of cakes section */
